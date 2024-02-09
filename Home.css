@@ -134,15 +134,15 @@ ion-icon{
 h1 {
   color: var(--brand-secondary);
   text-align: center;
-  font-weight: 700;
+  font-weight: bolder;
   margin: 0;
   font-size: 20px;
 }
  p {
   text-align: center;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 
