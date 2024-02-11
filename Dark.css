@@ -281,6 +281,7 @@
     width: 100%;
   }
   .img-container {
+    background-color: var(--bg_default);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -380,6 +381,7 @@
     flex-direction: column;
   }
   .fav-img-container {
+    background-color: var(--bg_default);
     width: 140px;
     height: 100px;
     margin-bottom: 10px;
