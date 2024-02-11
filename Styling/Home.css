@@ -390,7 +390,7 @@ select {
 .footer {
   width: 100%;
   background-color: var(--bg_body);
-  position: relative;
+  position: absolute;
   text-align: center;
   justify-content: center;
   padding: 20px 0px;
