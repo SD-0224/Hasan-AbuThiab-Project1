@@ -248,7 +248,7 @@ select {
   grid-auto-rows: 300px;
   width: 100%;
   gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, max-content));
   align-items: center;
   justify-items: center;
   position: relative;
@@ -259,7 +259,8 @@ select {
   align-items: flex-start;
   border-radius: 0.8rem;
   box-shadow: rgba(8, 8, 12, 0.05) 1px 1px 1px,
-    rgba(8, 8, 12, 0.05) -1px -1px 11px 1px;
+    rgba(8, 8, 12, 0.05) -1px -1px 11px 1px, rgba(8, 8, 12, 0.05) -1px 0 1px,
+    rgba(8, 8, 12, 0.05) 0 -1px 1px;
   background-color: var(--bg_default);
   cursor: pointer;
   overflow: hidden;
@@ -271,13 +272,14 @@ select {
   justify-content: center;
   width: 100%;
   height: 150px;
+  overflow: hidden;
   border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
 .img-container img {
   width: 100%;
   height: 100%;
   border-radius: 0.8rem 0.8rem 0rem 0rem;
-  object-fit: fill;
+  object-fit: cover;
 }
 .card-brief {
   padding: 1rem;
@@ -330,7 +332,73 @@ select {
   font-size: 0.9rem;
   user-select: none;
 }
+/*Favourite section */
+
+.fav-container
+{
+  display: flex;
+  font-size: 0.9rem;
+  position: fixed;
+  flex-direction: column;
+  background-color: var(--bg_default);
+  padding-left: 3rem;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  box-shadow: rgba(8, 8, 12, 0.05) 1px 1px 1px,
+    rgba(8, 8, 12, 0.05) -1px -1px 11px 1px, rgba(8, 8, 12, 0.05) -1px 0 1px,
+    rgba(8, 8, 12, 0.05) 0 -1px 1px;
+}
+.fav-cards-container {
+  display: flex;
+  gap: 15px;
+}
+.fav-card {
+  width: 140px;
+  height: 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  display: flex;
+  flex-direction: column;
+}
+.fav-img-container {
+  width: 140px;
+  height: 100px;
+  margin-bottom: 10px;
+} 
+.fav-img-container img {
+  width: 100%;
+  height: 100%;
+}
+.fav-card-info {
+  height: 30px;
+  padding: 0px 10px;
+}
+.fav-card-info h4 {
+  margin: 0px;
+}
+.fav-stars-container {
+  height: 35px;
+  padding: 0px 10px;
+  font-size: 12px;
+  color: #be8b00;
+}
+
 /*Responsiveness based on screen size */
+
+@media screen and (max-width: 350px) {
+  .header-background-1 {
+    clip-path: polygon(100% 0, 0 16%, 100% 38%);
+  }
+
+  .header-background-2 {
+    clip-path: polygon(100% 0, 0 0, 0 47%);
+  }
+}
 @media screen and (max-width: 499px) {
   .filter {
     border: 0px;
@@ -340,7 +408,13 @@ select {
     border: 0;
   }
   label {
+    font-size: 0.7rem;
+    padding: 0.4rem;
     border: 0px;
+  }
+  .filters-container {
+    border: 0;
+    padding: 2px;
   }
 }
 @media screen and (min-width: 500px) {

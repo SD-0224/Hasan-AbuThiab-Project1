@@ -17,14 +17,15 @@
       <a class="logo" href="#" id="Welcome-Logo">Web Topics</a>
       <nav id="desktop-nav">
         <div class="container">
-          <ul class="nav_buttons">
+          <ul class="nav_buttons" id="display-buttons">
             <li>
               <button class="header-button" id="Display-button">
                 <i><ion-icon name="moon-outline"></ion-icon></i><span
                   id="btn-text">Dark Mode</span>
               </li>
               <li>
-                <button class="header-button" id="favourite-button">
+                <button  onclick="toggleDisplay()" class="header-button"
+                  id="favourite-button">
                   <i><ion-icon name="heart-outline"></ion-icon></i><span
                     id="btn-text">Favourites</span>
                 </button>
@@ -318,7 +319,60 @@
         </div>
       </section>
     </section>
+    <section class="fav-container hidden" id="Favourite-section">
+      <p class="fav-title">My Favourite Topics</p>
+      <div class="fav-cards-container">
+        
+        <div class="fav-card">
+          <div class="fav-img-container">
+            <img src="images/angular.png" alt="Angular" />
+          </div>
 
+          <div class="fav-card-info">
+            <h4>
+              <b>Angular</b>
+            </h4>
+          </div>
+          <div class="fav-stars-container">
+            <i>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star-outline"></ion-icon></i>
+          </div>
+        </div>
+        <div class="fav-card">
+          <div class="fav-img-container">
+            <img src="images/react.webp" alt="React" />
+          </div>
+          <div class="fav-card-info">
+            <h4>
+              <b>React</b>
+            </h4>
+            
+          </div>
+          <div class="fav-stars-container">
+            <i>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star-outline"></ion-icon></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function toggleDisplay() {
+        var favouriteSection = document.getElementById("Favourite-section");
+      if (favouriteSection.style.display === "none" || favouriteSection.style.display === "") {
+        favouriteSection.style.display = "block";
+      } else {
+        favouriteSection.style.display = "none";
+      }
+      }
+    </script>
     <script type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule
