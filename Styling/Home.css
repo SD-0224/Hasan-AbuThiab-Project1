@@ -1,5 +1,3 @@
-
-
 .main-content {
   background-color: var(--bg_body);
   display: flex;
@@ -209,7 +207,6 @@ select {
     border: 0;
     padding: 2px;
   }
-
 }
 @media screen and (min-width: 500px) {
   .search-container {
@@ -226,7 +223,6 @@ select {
     border: 0px;
     width: 60%;
   }
- 
 }
 @media screen and (min-width: 900px) {
   .filters-container {

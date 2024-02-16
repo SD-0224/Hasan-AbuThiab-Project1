@@ -89,16 +89,18 @@
   
   /*Welcome message*/
   .header-container {
-    
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--dark-bg_default);
-    align-items: center;
-    text-align: center;
-    height: 6rem;
-    width: 100%;
-    padding: 0px 4% 0% 4%;
+    min-width: 100%;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-bg_default);
+  align-items: center;
+  text-align: center;
+  height: 20vh;
+  width: 100vw;
+  padding: 0px 4% 0% 4%;
+  margin-bottom: 3rem;
   }
   .header-background-1 {
     position: absolute;
@@ -417,14 +419,28 @@
     color: var(--dark-heart-color);
   }
   /*Responsiveness based on screen size */
-  
-  @media screen and (max-width: 350px) {
+
+  @media screen and (max-width: 580px) {
     .header-background-1 {
       clip-path: polygon(100% 0, 0 16%, 100% 38%);
     }
   
     .header-background-2 {
       clip-path: polygon(100% 0, 0 0, 0 47%);
+    }
+    header
+    {
+      padding: 0.1rem 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .header-background-1 {
+      clip-path: polygon(100% 0, 0 10%, 100% 35%);
+    }
+  
+    .header-background-2 {
+      clip-path: polygon(100% 0, 0 0, 0 40%);
     }
   }
   @media screen and (max-width: 499px) {
@@ -443,6 +459,23 @@
     .filters-container {
       border: 0;
       padding: 2px;
+    }
+    .fav-container
+    {
+      padding-left: 1rem;
+  
+    }
+    .header-button {
+      font-size: 0px;
+    }
+    .header-button i {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      justify-content: center;
+      align-items: center;
+      padding-left: 1px;
+      padding-right: 1px;
     }
   }
   @media screen and (min-width: 500px) {
