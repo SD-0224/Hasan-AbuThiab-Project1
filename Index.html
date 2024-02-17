@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    
+
     <link rel="stylesheet" href="variables.css  " type="text/css" />
     <link rel="stylesheet" href="Styling/Shared.css" type="text/css" />
     <link rel="stylesheet" href="Styling/Home.css  " type="text/css" />
@@ -14,27 +14,29 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&display=swap"
     rel="stylesheet" />
+
   <body>
     <header id="header" role="banner">
-      <a class="logo" href="#" id="Welcome-Logo">Web Topics</a>
       <nav id="desktop-nav" role="display-options" aria-label="Main Display">
-        <div class="container">
-          <ul class="nav_buttons" id="display-buttons">
-            <li>
-              <button class="header-button" id="Display-button" aria-label="Toggle Dark Mode">
-                <i><ion-icon name="moon-outline"></ion-icon></i><span id="btn-text">Dark Mode</span>
+        <a class="logo" href="#" id="Welcome-Logo">Web Topics</a>
+
+        <div class="button-container">
+              <button class="header-button" id="Display-button"
+                aria-label="Toggle Dark Mode">
+                <i><ion-icon name="moon-outline"></ion-icon></i><span
+                  id="btn-text">Dark Mode</span>
               </button>
-            </li>
-            <li>
-              <button onclick="toggleDisplay()" class="header-button" id="favourite-button" aria-label="Toggle Favourites">
-                <i><ion-icon name="heart-outline"></ion-icon></i><span id="btn-text">Favourites</span>
+            
+              <button onclick="toggleDisplay()" class="header-button"
+                id="favourite-button"
+                aria-label="Toggle Favourites">
+                <i><ion-icon name="heart-outline"></ion-icon></i><span
+                  id="btn-text">Favourites</span>
               </button>
-            </li>
-          </ul>
         </div>
       </nav>
     </header>
-  
+
     <section class="header-container" id="Welcome-Message" role="banner">
       <div class="header-background-1"></div>
       <div class="header-background-2"></div>
@@ -43,41 +45,46 @@
         <p>We have a new design that's fresh, modern and easy to use</p>
       </div>
     </section>
-      <section class="main-content" role="main">
-        <section class="search-container"  role="search" aria-label="Search">
-          <div class="search-input" role="searchbox" aria-labelledby="search-input-label">
-            <i class="search-outline"><ion-icon
-                name="search-outline"></ion-icon></i>
-            <input id="search-input-field" type="text"
-              placeholder="Search the website..." />
-          </div>
-          <div class="filters-container"  role="group" aria-labelledby="filters-section">
-            <div class="filter" role="listitem">
-              <label for="sort-by">Sort by:</label>
-              <select id="sort-by" name="sort-by">
-                <option value="default">Default</option>
-              </select>
-            </div>
-            <div class="filter" role="listitem">
-              <label for="filter-by">Filter by:</label>
-              <select id="filter-by" name="filter-by">
-                <option value="default">Default</option>
-              </select>
-            </div>
-          </div>
-        </section>
-        <div class="search-summary" aria-live="polite" role="status" id="search-summary">"24" Web Topics Found
+    <main class="main-content" role="main">
+      <section class="search-container" role="search" aria-label="Search">
+        <div class="search-input" role="searchbox"
+          aria-labelledby="search-input-label">
+          <i class="search-outline"><ion-icon
+              name="search-outline"></ion-icon></i>
+          <input id="search-input-field" type="text"
+            placeholder="Search the website..." />
         </div>
-        <section class="cards-section">
-          <div class="card-container" role="article">
-            <div class="img-container" role="img"><img src="images/html.png" alt="HTML" />
+        <div class="filters-container" role="group"
+          aria-labelledby="filters-section">
+          <div class="filter" role="listitem">
+            <label class="sort-by-label"for="sort-by">Sort by:</label>
+            <select id="sort-by" name="sort-by">
+              <option value="default">Default</option>
+            </select>
+          </div>
+          <div class="filter" role="listitem">
+            <label for="filter-by">Filter by:</label>
+            <select id="filter-by" name="filter-by">
+              <option value="default">Default</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <div class="search-summary" aria-live="polite" role="status"
+        id="search-summary">"24" Web Topics Found
+      </div>
+      <section class="cards-section">
+        <a class="card-container" role="article">
+          <div class="img-container" role="img"><img src="images/html.png"
+              alt="HTML" />
+          </div>
+          <div class="card-brief">
+            <div class="card-info">
+              <p>Web Development Languages </p>
+              <h3><b>HTML</b></h3>
             </div>
-            <div class="card-brief">
-              <div class="card-info">
-                <p>Web Development Languages </p>
-                <h3><b>HTML</b></p></h3>
-            </div>
-            <div class="stars-container" role="img" aria-label="rating: 4 out of 5">
+            <div class="stars-container" role="img"
+              aria-label="rating: 4 out of 5">
               <i>
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -90,15 +97,17 @@
             </div>
           </div>
         </div>
-        <div class="card-container" role="article" >
-          <div class="img-container" role="img"><img src="images/css.webp" alt="CSS" />
+        <a class="card-container" role="article">
+          <div class="img-container" role="img"><img src="images/css.webp"
+              alt="CSS" />
           </div>
           <div class="card-brief">
             <div class="card-info">
               <p>Web Development Languages </p>
               <h3><b>CSS</b></h3>
             </div>
-            <div class="stars-container" role="img" aria-label="rating: 4 out of 5">
+            <div class="stars-container" role="img"
+              aria-label="rating: 4 out of 5">
               <i>
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -110,8 +119,8 @@
               <p>Author: David Lee</p>
             </div>
           </div>
-        </div>
-        <div class="card-container" role="article">
+        </a>
+        <a class="card-container" role="article">
           <div class="img-container" role="img"><img src="images/javascript.jpg"
               alt="JavaScript">
           </div>
@@ -120,7 +129,8 @@
               <p>Web Development Languages </p>
               <h3><b>JavaScript</b></h3>
             </div>
-            <div class="stars-container" role="img" aria-label="rating: 4 out of 5">
+            <div class="stars-container" role="img"
+              aria-label="rating: 4 out of 5">
               <i>
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -132,16 +142,18 @@
               <p>Author: Emily Chen</p>
             </div>
           </div>
-        </div>
-        <div class="card-container" role="article">
-          <div class="img-container" role="img"><img src="images/jquery.png" alt="jQuery">
+        </a>
+        <a class="card-container" role="article">
+          <div class="img-container" role="img"><img src="images/jquery.png"
+              alt="jQuery">
           </div>
           <div class="card-brief">
             <div class="card-info">
               <p>Frontend Frameworks and Libraries </p>
               <h3><b>jQuery</b></h3>
             </div>
-            <div class="stars-container" role="img" aria-label="rating: 4 out of 5">
+            <div class="stars-container" role="img"
+              aria-label="rating: 4 out of 5">
               <i>
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -154,8 +166,8 @@
             </div>
 
           </div>
-        </div>
-        <div class="card-container" role="article">
+        </a>
+        <a class="card-container" role="article">
           <div class="img-container" role="img"><img src="images/angular.png"
               alt="Angular">
           </div>
@@ -164,7 +176,8 @@
               <p>Frontend Frameworks and Libraries </p>
               <h3><b>Angular</b></h3>
             </div>
-            <div class="stars-container" role="img" aria-label="rating: 4 out of 5">
+            <div class="stars-container" role="img"
+              aria-label="rating: 4 out of 5">
               <i>
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -176,9 +189,10 @@
               <p>Author: Jessica Davis</p>
             </div>
           </div>
-        </div>
-        <div class="card-container" role="article">
-          <div class="img-container" role="img"><img src="images/react.webp" alt="React">
+        </a>
+        <a class="card-container" role="article">
+          <div class="img-container" role="img"><img src="images/react.webp"
+              alt="React">
           </div>
           <div class="card-brief">
             <div class="card-info">
@@ -187,7 +201,8 @@
                 <b>React</b>
               </h3>
             </div>
-            <div class="stars-container" role="img" aria-label="rating: 4 out of 5">
+            <div class="stars-container" role="img"
+              aria-label="rating: 4 out of 5">
               <i>
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -199,9 +214,10 @@
               <p>Author: Daniel Brown</p>
             </div>
           </div>
-        </div>
-        <div class="card-container" role="article">
-          <div class="img-container" role="img"><img src="images/vuejs.jpeg" alt="Vue.js">
+        </a>
+        <a class="card-container" role="article">
+          <div class="img-container" role="img"><img src="images/vuejs.jpeg"
+              alt="Vue.js">
           </div>
           <div class="card-brief">
             <div class="card-info">
@@ -210,7 +226,8 @@
                 <b>Vue.js</b>
               </h3>
             </div>
-            <div class="stars-container" role="img" aria-label="rating: 4 out of 5">
+            <div class="stars-container" role="img"
+              aria-label="rating: 4 out of 5">
               <i>
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -222,8 +239,8 @@
               <p>Author: Ava Jones</p>
             </div>
           </div>
-        </div>
-        <div class="card-container" role="article">
+        </a>
+        <a class="card-container" role="article">
           <div class="img-container" role="img"><img src="images/nodejs.webp"
               alt="Node.js">
           </div>
@@ -234,7 +251,8 @@
                 <b>Node.js</b>
               </h3>
             </div>
-            <div class="stars-container" role="img" aria-label="rating: 4 out of 5">
+            <div class="stars-container" role="img"
+              aria-label="rating: 4 out of 5">
               <i>
                 <ion-icon name="star"></ion-icon>
                 <ion-icon name="star"></ion-icon>
@@ -246,8 +264,8 @@
               <p>Author: Michael Kim</p>
             </div>
           </div>
-        </div>
-        <div class="card-container" role="article">
+        </a>
+        <a class="card-container" role="article">
           <div class="img-container" role="img"><img src="images/expressjs.webp"
               alt="Express.js">
           </div>
@@ -270,8 +288,8 @@
               <p>Author: Sophia Rodriguez</p>
             </div>
           </div>
-        </div>
-        <div class="card-container" role="article">
+        </a>
+        <a class="card-container" role="article">
           <div class="img-container" role="img"><img src="images/ruby.jpeg"
               alt="Ruby on Rails">
           </div>
@@ -294,9 +312,10 @@
               <p>Author: William Lee</p>
             </div>
           </div>
-        </div>
-        <div class="card-container" role="article">
-          <div class="img-container" role="img"><img src="images/django.jpeg" alt="Django">
+        </a>
+        <a class="card-container" role="article">
+          <div class="img-container" role="img"><img src="images/django.jpeg"
+              alt="Django">
           </div>
           <div class="card-brief">
             <div class="card-info">
@@ -317,14 +336,19 @@
               <p>Author: Olivia Martinez</p>
             </div>
           </div>
-        </div>
+        </a>
       </section>
     </section>
-    <section class="fav-container" id="Favourite-section" role="region" aria-label="Favourite Topics" aria-describedby="fav-description">
-      <p id="fav-description" class="fav-title" role="heading" aria-level="2">My Favourite Topics</p>
-      <div class="fav-cards-container" role="list" aria-labelledby="fav-list-heading">
-        
-        <div class="fav-card" role="listitem" aria-labelledby="angular-card-heading">
+    <section class="fav-container" id="Favourite-section" role="region"
+      aria-label="Favourite Topics"
+      aria-describedby="fav-description">
+      <p id="fav-description" class="fav-title" role="heading" aria-level="2">My
+        Favourite Topics</p>
+      <div class="fav-cards-container" role="list"
+        aria-labelledby="fav-list-heading">
+
+        <div class="fav-card" role="listitem"
+          aria-labelledby="angular-card-heading">
           <div class="fav-img-container">
             <img role="img" src="images/angular.png" alt="Angular" />
           </div>
@@ -333,7 +357,8 @@
               <b>Angular</b>
             </h4>
           </div>
-          <div class="fav-stars-container" role="img" aria-label="rating: 4 out of 5">
+          <div class="fav-stars-container" role="img"
+            aria-label="rating: 4 out of 5">
             <i>
               <ion-icon name="star"></ion-icon>
               <ion-icon name="star"></ion-icon>
@@ -343,8 +368,9 @@
             </i>
           </div>
         </div>
-    
-        <div class="fav-card" role="listitem" aria-labelledby="react-card-heading">
+
+        <div class="fav-card" role="listitem"
+          aria-labelledby="react-card-heading">
           <div class="fav-img-container">
             <img role="img" src="images/react.webp" alt="React" />
           </div>
@@ -353,7 +379,8 @@
               <b>React</b>
             </h4>
           </div>
-          <div class="fav-stars-container" role="img" aria-label="rating: 4 out of 5">
+          <div class="fav-stars-container" role="img"
+            aria-label="rating: 4 out of 5">
             <i>
               <ion-icon name="star"></ion-icon>
               <ion-icon name="star"></ion-icon>
@@ -374,11 +401,11 @@
     <script>
       function toggleDisplay() {
         var favouriteSection = document.getElementById("Favourite-section");
-      if (favouriteSection.style.display === "none" || favouriteSection.style.display === "") {
-        favouriteSection.style.display = "block";
-      } else {
-        favouriteSection.style.display = "none";
-      }
+        if (favouriteSection.style.display === "none" || favouriteSection.style.display === "") {
+          favouriteSection.style.display = "block";
+        } else {
+          favouriteSection.style.display = "none";
+        }
       }
     </script>
     <script type="module"

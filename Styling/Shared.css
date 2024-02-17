@@ -11,28 +11,25 @@ body {
 /* */
 
 /*CSS for the Navigation/Header. Coloring, basic alignment and padding */
+
 header {
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.1rem 3.5rem;
+  padding: 20px 0;
   background-color: var(--bg_default);
-  color: var(--bg_default);
-}
-
-nav,
-.nav_buttons {
-  display: flex;
-  align-items: center;
+  padding: 0 4% 0px 4%;
 }
 
 nav {
+  width: 100%;
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   align-items: center;
   height: 8vh;
 }
-.container {
-  justify-content: center;
+.button-container {
+  display: flex;
+  gap: 3px;
 }
 
 .nav_buttons {
@@ -50,28 +47,14 @@ nav {
 }
 
 .header-button {
-  user-select: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
-  background-color: var(--bg_default);
-
+  gap: 5px;
+  border: 1px solid var(--lines-color);
+  padding: 5px 10px;
   border-radius: 5px;
-  border: 1.2px solid var(--lines-color);
-
-  font-weight: 530;
-  font-size: 0.77rem;
-
-  gap: 4px;
-  height: 28px;
-  padding: 8px;
-  vertical-align: middle;
-
-  cursor: pointer;
+  color: var(--body-text);
+  background-color: var(--bg_default);
 }
 ion-icon {
   vertical-align: top;
@@ -205,7 +188,7 @@ h1 {
   bottom: 0;
   width: 100%;
   background-color: var(--bg_body);
-  position: absolute;
+  position: relative;
   text-align: center;
   justify-content: center;
   padding: 20px 0px;

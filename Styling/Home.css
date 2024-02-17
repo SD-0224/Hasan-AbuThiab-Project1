@@ -16,10 +16,9 @@
   box-shadow: rgba(8, 8, 12, 0.05) 0px 3px 8px, rgba(8, 8, 12, 0.05) 0px 0px 8px;
   display: flex;
   overflow: hidden;
-  margin-bottom: 2rem;
-  height: 80px;
+  margin-bottom: 25px;
+  height: 90px;
   width: 100%;
-  padding: 0rem;
   flex-direction: column;
 }
 .search-input {
@@ -38,7 +37,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
   border: 0px;
   font-size: 0.9rem;
   font-weight: 300;
@@ -51,7 +49,8 @@
   outline: none;
 }
 .filters-container {
-  border: 1px solid var(--lines-color);
+  
+  border-top: 1px solid var(--lines-color);
   width: 100%;
   height: 50%;
   display: flex;
@@ -72,7 +71,7 @@
 }
 label {
   font-size: 0.8rem;
-  padding: 0.5rem;
+  padding: 0.2rem;
   border-left: var(--lines-color) 1px solid;
 }
 select {
@@ -84,13 +83,12 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
-  padding-bottom: 0.5rem;
 }
 #sort-by {
   border-left: var(--lines-color) 1px solid;
 }
 #filter-by {
-  border-left: 1px solid var(--lines-color);
+  border-left: var(--lines-color) 1px solid;
 }
 .search-summary {
   font-size: 1.4rem;
@@ -104,8 +102,8 @@ select {
   display: grid;
   grid-auto-rows: 300px;
   width: 100%;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, max-content));
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
   align-items: center;
   justify-items: center;
   position: relative;
@@ -128,8 +126,7 @@ select {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 150px;
-  overflow: hidden;
+  height: 140px;
   border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
 .img-container img {
@@ -153,11 +150,10 @@ select {
   margin: 0px;
   height: 30px;
   font-size: 0.8rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 .card-info p {
   font-size: 0.8rem;
@@ -191,20 +187,19 @@ select {
 }
 
 @media screen and (max-width: 499px) {
-  .filter {
-    border: 0px;
-  }
-  #sort-by,
-  #filter-by {
+  
+  #sort-by {
+    border: 0; }
+  .sort-by-label
+  {
     border: 0;
   }
   label {
     font-size: 0.7rem;
     padding: 0.4rem;
-    border: 0px;
+    border-left: var(--lines-color) 1px solid;
   }
   .filters-container {
-    border: 0;
     padding: 2px;
   }
 }
