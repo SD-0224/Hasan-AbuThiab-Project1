@@ -31,7 +31,15 @@
     display: flex;
     gap: 3px;
   }
+  b{
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   
+  }
   .nav_buttons {
     gap: 0.5rem;
     list-style: none;
@@ -129,7 +137,6 @@
     display: flex;
     font-size: 0.9rem;
     color: var(--dark-body-text);
-
     position: fixed;
     flex-direction: column;
     background-color: var(--dark-bg_default);
