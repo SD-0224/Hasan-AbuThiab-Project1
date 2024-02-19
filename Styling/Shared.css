@@ -76,7 +76,6 @@ ion-icon {
   height: 5rem;
   width: 100vw;
   padding: 0px 4% 0% 4%;
-  margin-bottom: 3rem;
 }
 .header-background-1 {
   position: absolute;
@@ -105,8 +104,8 @@ ion-icon {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 50px 4% 0% 4%;
-  padding-top: 50px;
+  padding: 30px 4% 0% 4%;
+  padding-top: 30px;
 }
 h1 {
   color: var(--brand-secondary);
@@ -124,6 +123,15 @@ h1 {
   user-select: none;
 }
 
+b{
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+}
 .fav-container {
   display: flex;
   font-size: 0.9rem;
@@ -141,6 +149,11 @@ h1 {
     rgba(8, 8, 12, 0.05) -1px -1px 11px 1px, rgba(8, 8, 12, 0.05) -1px 0 1px,
     rgba(8, 8, 12, 0.05) 0 -1px 1px;
   z-index: 1;
+}
+.fav-title
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .fav-cards-container {
   display: flex;
@@ -182,7 +195,7 @@ h1 {
   height: 35px;
   padding: 0px 10px;
   font-size: 12px;
-  color: #be8b00;
+  color: #ffc933;
 }
 .footer {
   bottom: 0;
@@ -198,19 +211,8 @@ h1 {
 }
 /*Responsiveness based on screen size */
 
-@media screen and (max-width: 280px) {
-  .header-background-1 {
-    clip-path: polygon(100% 0, 0 16%, 100% 38%);
-  }
 
-  .header-background-2 {
-    clip-path: polygon(100% 0, 0 0, 0 47%);
-  }
-  header {
-    padding: 0rem 0rem;
-  }
-}
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 820px) {
   .header-background-1 {
     clip-path: polygon(100% 0, 0 16%, 100% 38%);
   }
@@ -238,5 +240,15 @@ h1 {
     align-items: center;
     padding-left: 1px;
     padding-right: 1px;
+  }
+}
+@media screen and (max-width:450px)
+{
+  .welcome-message p
+  {
+    font-size: 0.7rem;
+  }
+  h1 {
+    font-size: 16px;
   }
 }
